@@ -1,0 +1,4 @@
+<config>
+	<settings verbose="true"/>
+	<database url="jdbc:mysql://localhost:3307/sgcm_bd" user="root" password="root"/>
+</config>
