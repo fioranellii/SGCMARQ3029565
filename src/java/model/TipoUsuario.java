@@ -96,4 +96,5 @@ public class TipoUsuario extends DataAccessObject {
         return cp;
     }
     
+    
 }
