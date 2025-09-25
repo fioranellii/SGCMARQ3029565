@@ -5,4 +5,62 @@
     <exception class="class java.lang.Exception" date="Thu Aug 21 11:38:27 BRT 2025" message="teste2">java.lang.Exception: teste2
 	at aulas.xml.Teste.main(Teste.java:8)
 </exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:26:21 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.insert(DataAccessObject.java:118)
+	at model.framework.DataAccessObject.save(DataAccessObject.java:176)
+	at model.__exemplo.main(__exemplo.java:46)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:27:11 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.insert(DataAccessObject.java:118)
+	at model.framework.DataAccessObject.save(DataAccessObject.java:176)
+	at model.__exemplo.main(__exemplo.java:45)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:28:11 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:244)
+	at model.__exemplo.main(__exemplo.java:35)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:28:34 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:244)
+	at model.__exemplo.main(__exemplo.java:35)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:29:54 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:244)
+	at model.__exemplo.main(__exemplo.java:35)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:30:20 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:210)
+	at model.__exemplo.main(__exemplo.java:35)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:30:55 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:210)
+	at model.__Exemplo.main(__Exemplo.java:35)
+</exception>
+    <exception class="class java.lang.IllegalArgumentException" date="Thu Sep 25 11:31:12 BRT 2025" message="InputStream cannot be null">java.lang.IllegalArgumentException: InputStream cannot be null
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:118)
+	at controller.AppConfig.&lt;init&gt;(AppConfig.java:28)
+	at controller.AppConfig.getInstance(AppConfig.java:48)
+	at model.framework.DataAccessObject.getAllTableEntities(DataAccessObject.java:210)
+	at model.__Exemplo.main(__Exemplo.java:35)
+</exception>
 </Logs>

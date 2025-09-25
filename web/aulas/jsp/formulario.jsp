@@ -1,12 +1,12 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>GetPost Formulário</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Formulário</title>
     </head>
     <body>
-        <!--<form action="http://localhost:8080/SGCMARQ3029565/aulas/servlet/getpost" method="get-->
-        <form action="http://localhost:8080/SGCMARQ3029565/aulas/servlet/getpost" method="post">
+        <form action="<%= request.getContextPath()%>/aulas/jsp/formulariojsp" method="post">
             <h2>Formulário</h2>
             <p>
                 <label for="campoA">Campo A: </label>
@@ -19,9 +19,6 @@
                 <label for="opcaoB">Opção B</label><br/><br/>
 
                 <input type="submit" name="btEnviar" value="Salvar"/>
-
-
-
             </p>
         </form>
     </body>

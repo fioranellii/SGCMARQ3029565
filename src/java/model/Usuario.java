@@ -1,6 +1,7 @@
-package model.framework;
+package model;
 
 import java.util.ArrayList;
+import model.framework.DataAccessObject;
 
 /**
  * Representa um usuário no sistema. Esta classe herda de DataAccessObject para
