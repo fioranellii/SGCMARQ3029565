@@ -29,6 +29,7 @@ public class DataBaseConnections {
                 AppConfig.getInstance().getUrl(),
                 AppConfig.getInstance().getUser(),
                 AppConfig.getInstance().getPassword() );
+        System.out.println(AppConfig.getInstance().getUrl());
         pool.add(con);        
         return con;
     }
