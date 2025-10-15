@@ -13,15 +13,12 @@ public class Status extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        int valor = 13/0; // retorna o status 500
         
-        int valor = 13 / 0;//retorna status 500
-        
-        resp.setContentType("text/plain;charset=UTF-8");
-        
+        resp.setContentType("text/plain;charset=UFT-8");
         PrintWriter pw = resp.getWriter();
-                
-        pw.write("testando metodo HTTP GET");
+        pw.write("testando método HTTP GET");
         pw.close();
     }
-
+    
 }

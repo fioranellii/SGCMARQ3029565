@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="SGCMARQ3029565" default="default" basedir=".">
-    <description>Builds, tests, and runs the project SGCMARQ3029565.</description>
+<project name="SGCMAQ3029956" default="default" basedir=".">
+    <description>Builds, tests, and runs the project SGCMAQ3029956.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
