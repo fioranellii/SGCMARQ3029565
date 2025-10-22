@@ -8,39 +8,41 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class Exemplo2 {
-    public static void main(String[] args) throws SQLException{
+    public static void main(String[] args) throws SQLException {
         
-        final String url = "jdbc:mysql://localhost:3307/sgcm_bd"; // ou 3306 para a porta usada em casa
+        final String url = "jdbc:mysql://localhost:3307/sgcm_bd";
         final String user = "root";
-        final String passworld = "root";
+        final String password = "root";
         
-        Connection con = DriverManager.getConnection(url, user, passworld);
-        
+        Connection con = DriverManager.getConnection(url, user, password);
         System.out.println(con);
         
         Statement st = con.createStatement();
-
+        
         String dql = "SELECT * FROM tipo_usuario";
         
         ResultSet rs = st.executeQuery(dql);
         ResultSetMetaData rsm = rs.getMetaData();
-
-        // 1 to <=
-        for(int i = 1; i <= rsm.getColumnCount(); i++){ // imprimi os nomes das colunas
-            System.out.print(rsm.getColumnLabel(i) + " ");
-        }
-        System.out.println("");
-
-        while(rs.next()) {
-            for(int i = 1; i <= rsm.getColumnCount(); i++) {
-                System.out.print(rs.getObject(i) + " ");
-            }
-            System.out.println("");
-        }
-
-        rs.close();
         
-        st.close();
+        // 1 to <=
+        for( int i = 1; i <= rsm.getColumnCount(); i++ ) {
+            System.out.print( rsm.getColumnLabel(i) + " ");
+        }
+        System.out.print("\n");     
+        
+        while( rs.next() ) {
+            
+            for(int i = 1; i <= rsm.getColumnCount(); i++) {
+                System.out.print( rs.getObject(i) + " ");
+            }
+            System.out.print("\n");
+            
+        }          
+            
+        rs.close();        
+        
+        st.close();        
         con.close();
+        
     }
 }

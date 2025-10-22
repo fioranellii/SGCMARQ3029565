@@ -6,11 +6,11 @@
         <title>Formulário</title>
     </head>
     <body>
-        <h1>Fomulário!</h1>
+        <h1>Formulário</h1>
         <form action="<%= request.getContextPath() %>/aulas/jsp/formulariojsp" method="post">
             <p>
                 <label for="campoA">Campo A: </label>
-                <input type="text" id="campoA" name="campoA" pattern="\d+" title="apenas dígitos" required /><br/><br/>
+                <input type="text" id="campoA" name="campoA" pattern="\d+" title="apenas dígitos"  required/><br/><br/>
 
                 <input type="checkbox" id="opcaoA" name="opcaoA" value="opcaoA"/>
                 <label for="opcaoA">Opção A</label><br/><br/>
@@ -19,7 +19,7 @@
                 <label for="opcaoB">Opção B</label><br/><br/>
 
                 <input type="submit" name="btEnviar" value="Salvar"/>
-            </p>
+            </p>            
         </form>
     </body>
 </html>

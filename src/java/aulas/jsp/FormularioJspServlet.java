@@ -10,10 +10,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
-@WebServlet(name = "FormularioJspServlet", urlPatterns = {"/aulas/jsp/formulariojsp"})
+@WebServlet(name="FormularioJspServlet", urlPatterns={"/aulas/jsp/formulariojsp"})
 public class FormularioJspServlet extends HttpServlet {
-
-    ArrayList <InformacaoFormulario> dados;
+    
+    ArrayList<InformacaoFormulario> dados;
 
     @Override
     public void init() throws ServletException {
@@ -21,9 +21,8 @@ public class FormularioJspServlet extends HttpServlet {
         dados = new ArrayList<>();
     }
     
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
         String campoA = request.getParameter("campoA");
         String opcaoA = request.getParameter("opcaoA");
         String opcaoB = request.getParameter("opcaoB");
@@ -32,24 +31,26 @@ public class FormularioJspServlet extends HttpServlet {
         System.out.println( " opcaoA : " + opcaoA );
         System.out.println( " opcaoB : " + opcaoB );
         
-        if (campoA != null) { // verifica se os dados vieram do formulario
+        if( campoA != null ) {
             InformacaoFormulario info = new InformacaoFormulario();
             info.setCampoA(campoA);
             info.setOpcaoA(opcaoA);
             info.setOpcaoB(opcaoB);
             
-            dados.add(info); // vai alimentando o arraylist
+            dados.add(info);
         }
         
-        request.setAttribute("dados", dados); // esse atributo veio do servidor e não do browser
-        // sem contexto, redirecionamento interno no servidor
-        request.getRequestDispatcher("/aulas/jsp/dados_formulario.jsp").forward(request, response);
+        request.setAttribute("dados", dados);
+        // sem contexto, redirecionameto interno no servidor
+        request.getRequestDispatcher( "/aulas/jsp/dados_formulario.jsp" ).forward(request, response);
+        
     }
     
-        @Override
+    @Override
     public void destroy() {
         super.destroy();
         dados.clear();
         dados = null;
     }
+
 }

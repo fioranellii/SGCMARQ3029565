@@ -1,6 +1,5 @@
 package aulas.servlet.ciclo;
 
-import jakarta.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -10,68 +9,69 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
 
-@WebServlet(name = "Ciclo", urlPatterns = {"/aulas/servlet/ciclo"})
+@WebServlet(name="Ciclo", urlPatterns={"/aulas/servlet/ciclo"})
 public class Ciclo extends HttpServlet {
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init() throws ServletException {
         /*
-        Inicialização dos recursos.
+        Inicialização do Servlet.
         
-        Leitura dos parâmetros iniciais e criação /Atribuir as variáveis globais (como conexão a banco de dados).
+        Leitura dos parâmetros inicais e criaçao variáveis globais comuns as requisições (como conexão a banco de dados).
         */
         super.init();
     }
     
-    // Acada F5 é uma requisicao que voce da
-    
-        @Override 
+    @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /*
         Recebimento de requisições HTTP enquanto o servlet estiver ativo.
         
-        super.service(...) encaminha as requisições aos metodos HTTP implementados.
+        super.service(...) encaminha a resquisições aos métodos HTTP implementados.
         */
 //        super.service(req, resp);
-
-        System.out.println("\n ------ HeaderNames Request");
+        
+        System.out.println("\n--- HeaderNames Request");
         Enumeration<String> headerNames = request.getHeaderNames();
-
-        while (headerNames.hasMoreElements()) {
-            String nextElement = headerNames.nextElement();
-            System.out.println(nextElement + " : " + request.getHeader(nextElement));
+        while( headerNames.hasMoreElements() ) {
+            String name = headerNames.nextElement();
+            System.out.println( name + " : " + request.getHeader(name) );
         }
+        System.out.println("--- HeaderNames Request\n");
+
+        String html = "<!DOCTYPE html>";        
+        html += "<html>";
+        html += "<head>";
+        html += "<title>Servlet Ciclo de Vida</title>";
+        html += "</head>";
+        html += "<body>";
+        html += "<h1>Ciclo de Vida de um Servlet</h1>";
+        html += "</body>";
+        html += "</html>";
         
-        String html = "<!DOCTYPE html>";
-        html +="<html>";
-        html +="<head>";
-        html +="<title>Servlet Ciclo de Vida</title>";
-        html +="</head>";
-        html +="<body>";
-        html +="<h1>Ciclo de Vida de um Servlet</h1>";
-        html +="</body>";
-        html +="</html>";
-        
+        // http://www.iana.org/assignments/media-types/
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter pw = response.getWriter();
         
+        PrintWriter pw = response.getWriter();        
         pw.write(html);
         pw.close();
         
-        System.out.println("\n ------ HeaderNames Response");
-            for (String name : response.getHeaderNames()) {
-                System.out.println( name + " : " + response.getHeader(name));
-            }
-        System.out.println("------ HeaderNames Response");
+        System.out.println("\n--- HeaderNames Response");
+        for( String name : response.getHeaderNames() ) {
+            System.out.println( name + " : " + response.getHeader(name) );
+        }
+        System.out.println("--- HeaderNames Response\n");
+        
     }
-    
-        @Override
+
+    @Override
     public void destroy() {
         /*
-        Encerramento da Servlet, liberação dos recursos.
+        Encerramento do Servlet.
         
-        Chamado quando o  for encerrado, utilizado para liberação de recuros(como conexão a banco de dados).
+        Chamado quando o servlet for encerrado, utilizado para liberação de rercuros (como conexão a banco de dados).
         */
         super.destroy();
     }
+
 }

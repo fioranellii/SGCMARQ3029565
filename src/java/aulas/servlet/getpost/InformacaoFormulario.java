@@ -2,9 +2,10 @@ package aulas.servlet.getpost;
 
 // JavaBean tem um construtor sem argumentos e métodos de acesso get e set
 public class InformacaoFormulario {
+    
     private String campoA;
-    private String opcaoA;
-    private String opcaoB;
+    private String opcaopA;
+    private String opcaopB;
 
     public InformacaoFormulario() {
     }
@@ -18,18 +19,19 @@ public class InformacaoFormulario {
     }
 
     public String getOpcaoA() {
-        return opcaoA;
+        return opcaopA;
     }
 
-    public void setOpcaoA(String opcaoA) {
-        this.opcaoA = opcaoA;
+    public void setOpcaoA(String opcaopA) {
+        this.opcaopA = opcaopA;
     }
 
     public String getOpcaoB() {
-        return opcaoB;
+        return opcaopB;
     }
 
-    public void setOpcaoB(String opcaoB) {
-        this.opcaoB = opcaoB;
+    public void setOpcaoB(String opcaopB) {
+        this.opcaopB = opcaopB;
     }
+    
 }

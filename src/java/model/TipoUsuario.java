@@ -14,7 +14,7 @@ public class TipoUsuario extends DataAccessObject {
     public TipoUsuario() {
         super("tipo_usuario");
     }
-
+    
     public int getId() {
         return id;
     }
@@ -73,27 +73,41 @@ public class TipoUsuario extends DataAccessObject {
         moduloAdministrativo = (String) data.get(2);
         moduloAgendamento = (String) data.get(3);
         moduloAtendimento = (String) data.get(4);
-        
         return this;
     }
 
     @Override
-    protected TipoUsuario copy() {
+    protected TipoUsuario copy() {        
         TipoUsuario cp = new TipoUsuario();
         
-        cp.setId(getId());
-        cp.setNome(getNome());
-        cp.setModuloAdministrativo(getModuloAdministrativo());
-        cp.setModuloAgendamento(getModuloAgendamento());
-        cp.setModuloAtendimento(getModuloAtendimento());
+        cp.setId( getId() );
+        cp.setNome( getNome() );
+        cp.setModuloAdministrativo( getModuloAdministrativo() );
+        cp.setModuloAgendamento( getModuloAgendamento() );
+        cp.setModuloAtendimento( getModuloAtendimento() );
         
-        cp.setNovelEntity(false); // copiou um existente
+        cp.setNovelEntity(false); // assume que o objeto copiado já existe no banco de dados
         
         return cp;
     }
     
     @Override
     public String toString() {
-        return "(" + getId() + ", " + getNome() + ", " + getModuloAdministrativo() + ", " + getModuloAgendamento() + ", " + getModuloAtendimento() + ")";
+        return "(" + getId() + "," + getNome() + "," + getModuloAdministrativo() + "," + getModuloAgendamento() + "," + getModuloAtendimento() + ")";
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if( obj instanceof TipoUsuario ) {
+            TipoUsuario aux = (TipoUsuario) obj;
+            if( getId() == aux.getId() ) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    
 }

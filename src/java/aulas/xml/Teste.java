@@ -5,7 +5,7 @@ import logtrack.ExceptionLogTrack;
 public class Teste {
     public static void main(String[] args) {
         
-        ExceptionLogTrack.getInstance().addLog( new Exception("teste2"));
+        ExceptionLogTrack.getInstance().addLog( new Exception("Teste!") );
         
     }
 }
